@@ -13,16 +13,17 @@ export default class routerMap extends Component {
   render() {
     return (
       <Router>
-        <App>
+        <div>
           <Switch>
-            <Route path='/search/:type(/:keyword)' component={Search}/>
+            <Route path='/' exact component={Home}/>
+            {/* <Route path='/search/:type(/:keyword)' component={Search}/>
             <Route path='/detail/:id' component={Detail}/>
             <Route path='/city' component={City}/>
-            <Route path='/user'component={User}/>
-            <Route path='/' exact component={Home}/>
+            <Route path='/user'component={User}/> */}
             <Route path='*' component={NotFound}/>
           </Switch>
-        </App>
+          <App/>
+        </div>
       </Router>
     )
   }

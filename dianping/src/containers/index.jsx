@@ -22,7 +22,6 @@ class App extends Component {
           this.props.children : 
           <div>...加载中</div>
         }
-        <p>{this.props.value}</p>
       </div>
     );
   }
@@ -33,7 +32,7 @@ class App extends Component {
       cityName = '北京'
     }
     this.props.userInfoActions.update({
-      cityName
+      cityName: cityName
     })
     this.setState({
       ininDone: true
@@ -43,7 +42,6 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    value: state.userinfo.cityName
   }
 }
 

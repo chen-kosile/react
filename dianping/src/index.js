@@ -4,7 +4,7 @@ import RouteMap from './router/routerMap';
 import { Provider } from 'react-redux'
 import configureStore from './store/configureStore';
 
-import './static/css/common.less'
+import './static/css/common.css'
 import './static/css/font.css'
 
 const store = configureStore();
