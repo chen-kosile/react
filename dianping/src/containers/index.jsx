@@ -6,11 +6,13 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as userInfoActionsFormOtherFile from '../actions/userinfo.js'
 
+import Loading from '../components/Loading'
+
 class App extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      ininDone: false
+      initDone: false
     }
     this.shouldComponentUpdate = PureRenderMixinx.shouldComponentUpdate.bind(this);
   }
@@ -18,9 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state.initDone ? 
-          this.props.children : 
-          <div>...加载中</div>
+          this.state.initDone ? this.props.children : <Loading></Loading>
         }
       </div>
     );
@@ -35,7 +35,7 @@ class App extends Component {
       cityName: cityName
     })
     this.setState({
-      ininDone: true
+      initDone: true
     })
   }
 }

@@ -1,0 +1,58 @@
+.list-container {
+  background-color: #fff;
+  padding: 0 15px;
+}
+.list-item {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.list-item .item-img-container {
+  width: 120px;
+  height: 90px;  
+}
+.item-img-container img {
+  margin-left: 100px;
+  padding-left: 30px;
+}
+
+.item-content {
+  margin-left: 100px;
+  padding-left: 30px;
+}
+
+.item-content .item-title-container {
+  height: 25px;
+}
+
+.item-title-container h3 {
+  font-size: 18px;
+  line-height: 1;
+  color: #333;
+}
+.item-title-container span{
+  font-size: 13px;
+  line-height: 18px;
+  color: #999;
+}
+.item-sub-title {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+} 
+.item-price-contianer {
+  margin-top: 10xp;
+}
+.item-price-contianer .price {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  color: rgb(233, 32, 61);
+}
+.item-price-contianer .number {
+  font-size: 13px;
+  line-height: 18;
+  color: #999;
+}
+

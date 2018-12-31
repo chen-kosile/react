@@ -15,6 +15,7 @@ export default class Category extends Component {
     const opt = {
       auto: 2500,
       callback: (index) => {
+        // console.log(index);
         this.setState({
           index: index
         })
@@ -24,7 +25,7 @@ export default class Category extends Component {
       <div id="home-category">
         <ReactSwipe swipeOptions={opt}>
             <div className="carousel-item">
-                <ul className="clear-fix">
+                <ul className="clear-fix" >
                     <li className="float-left jingdian">景点</li>
                     <li className="float-left ktv">KTV</li>
                     <li className="float-left gouwu">购物</li>
