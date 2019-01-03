@@ -4,6 +4,7 @@ import LocalStore from '../util/localStore';
 import {CITYNAME} from '../config/localStoreKey'
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import * as userInfoActionsFormOtherFile from '../actions/userinfo.js'
 
 import Loading from '../components/Loading'
@@ -51,7 +52,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(App));

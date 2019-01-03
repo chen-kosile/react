@@ -5,6 +5,7 @@ import {getListData} from '../../../fetch/home/home'
 import ListComponent from '../../../components/ListComponent'
 
 import './style.css'
+import LoadMore from '../../../components/LoadMore';
 
 export default class List extends Component {
   constructor(props, context) {
@@ -25,7 +26,7 @@ export default class List extends Component {
     const result = getListData(cityName, 0)
     this.resultHandle(result);
   }
-  loadMoreData() {
+  loadMoreData = () => {
     this.setState({
       isLoadingMore: true
     })
@@ -61,6 +62,13 @@ export default class List extends Component {
           this.state.data.length
           ? <ListComponent data={this.state.data}></ListComponent>
           : <div>加载中</div>
+        }
+        {
+          this.state.hasMore
+          ? <LoadMore 
+          isLoadingMore={this.state.isLoadingMore}
+          loadMoreFn={this.loadMoreData}/>
+          : ''
         }
       </div>
     )

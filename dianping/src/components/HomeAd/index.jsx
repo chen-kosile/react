@@ -17,7 +17,7 @@ export default class HomeAd extends Component {
             this.props.data.map((item, index) => {
               return (
                 <div key={index} className="ad-item float-left">
-                  <a href={item.link} target="_blank">
+                  <a href={item.link} target="_blank" rel='noreferrer noopener'>
                     <img src={item.img} alt={item.title}/>
                   </a>
                 </div>

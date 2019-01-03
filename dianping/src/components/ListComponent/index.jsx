@@ -18,7 +18,6 @@ export default class ListComponent extends Component {
                 <div className="item-img-container float-left">
                   <img src={item.img} alt={item.title}/>
                 </div>
-
                 <div className="item-content">
                     <div className="item-title-container clear-fix">
                         <h3 className="float-left">{item.title}</h3>

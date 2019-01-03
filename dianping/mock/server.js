@@ -3,13 +3,13 @@ var router = require('koa-router')()
 
 const app = new Koa()
 
-router.get('/', async (ctx) => {
-    ctx.body = 'hello koa !'
-});
+// router.get('/', async (ctx) => {
+//     ctx.body = 'hello koa !'
+// });
 
-router.get('/api', async (ctx) => {
-    ctx.body = 'test data'
-});
+// router.get('/api', async (ctx) => {
+//     ctx.body = 'test data'
+// });
 
 // 首页 —— 广告（超值特惠）
 var homeAdData = require('./home/ad.js')
@@ -36,6 +36,6 @@ router.get('/api/homelist/:city/:page', async (ctx) => {
 // 开始服务并生成路由
 app.use(router.routes())
 app.use(router.allowedMethods());
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log('server run start');
 });

@@ -1,5 +1,5 @@
 #home-header {
-  background-color: #e9203d;
+  background-color: rgb(233, 32, 61);
   padding: 10px;
 }
 #home-header * {
@@ -28,6 +28,8 @@
 .home-header-middle .search-container input {
   font-size: 14px !important;
   font-weight: normal;
+  border: 0;
+  color: black !important;
 }
 .home-header-right {
   width: 30px;
