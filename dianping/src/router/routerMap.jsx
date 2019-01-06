@@ -18,8 +18,8 @@ export default class routerMap extends Component {
             <Switch>
               <Route path='/' exact component={Home}/>
               {/* <Route path='/search/:type(/:keyword)' component={Search}/>
-              <Route path='/detail/:id' component={Detail}/>
               <Route path='/user'component={User}/> */}
+              <Route path='/detail/:id' component={Detail}/>
               <Route path='/city' component={City}/>
               <Route path='*' component={NotFound}/>
             </Switch>

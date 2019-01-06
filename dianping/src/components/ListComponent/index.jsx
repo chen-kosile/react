@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import {Link} from 'react-router-dom'
 import './style.css'
 
 export default class ListComponent extends Component {
@@ -15,10 +15,11 @@ export default class ListComponent extends Component {
           this.props.data.map((item, index) => {
             return (
               <div className="list-item clear-fix" key={index}>
-                <div className="item-img-container float-left">
-                  <img src={item.img} alt={item.title}/>
-                </div>
-                <div className="item-content">
+                <Link to={`/detail/${item.id}`}>
+                  <div className="item-img-container float-left">
+                    <img src={item.img} alt={item.title}/>
+                  </div>
+                  <div className="item-content">
                     <div className="item-title-container clear-fix">
                         <h3 className="float-left">{item.title}</h3>
                         <span className="float-right">{item.distance}</span>
@@ -30,8 +31,8 @@ export default class ListComponent extends Component {
                         <span className="price float-left">￥{item.price}</span>
                         <span className="mumber float-right">已售{item.mumber}</span>
                     </div>
-                </div>
-
+                  </div>
+                </Link>
               </div>
             )
           })
