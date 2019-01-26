@@ -7,7 +7,7 @@ import Header from '../../components/Header'
 import CurrentCity from '../../components/CurrentCity'
 import CityList from '../../components/CityList'
 
-import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
+import * as userInfoActionsFromOtherFile from '../../store/actions/userinfo'
 
 import { CITYNAME } from '../../config/localStoreKey'
 import localStore from '../../util/localStore'

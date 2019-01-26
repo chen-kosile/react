@@ -29,7 +29,7 @@ export default class ListComponent extends Component {
                     </p>
                     <div className="item-price-container clear-fix">
                         <span className="price float-left">￥{item.price}</span>
-                        <span className="mumber float-right">已售{item.mumber}</span>
+                        <span className="mumber float-right">已售{item.number}</span>
                     </div>
                   </div>
                 </Link>
