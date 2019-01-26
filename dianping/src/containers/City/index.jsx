@@ -27,7 +27,7 @@ class City extends Component {
     )
   }
   changeCity = (newCity) => {
-    let {history} = this.props;
+    let { history } = this.props;
     if(newCity == null) {
       return
     }

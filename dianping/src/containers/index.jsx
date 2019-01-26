@@ -5,7 +5,7 @@ import {CITYNAME} from '../config/localStoreKey'
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import { withRouter } from 'react-router-dom'
-import * as userInfoActionsFormOtherFile from '../actions/userinfo.js'
+import * as userInfoActionsFormOtherFile from '../store/actions/userinfo.js'
 
 import Loading from '../components/Loading'
 
