@@ -18,8 +18,8 @@ export default class Detail extends Component {
       <div>
         <Header title="商户详情" type="share"/>
         <Info id={id}/>
-        {/* <Buy id={id}/>
-        <Comment id={id}/> */}
+        <Buy id={id}/>
+        {/* <Comment id={id}/> */}
       </div>
     )
   }
