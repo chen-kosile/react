@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import HomeAd from '../../../components/HomeAd/index'
 import { getAdData } from '../../../fetch/home/home'
+import Loading from '../../../components/Loading'
 
 export default class Ad extends Component {
   constructor(props, context) {
@@ -16,11 +17,14 @@ export default class Ad extends Component {
     const result = getAdData();
     result.then(res => res.json())
       .then(json => {
-        const data = json
-        if(data.length) {
-          this.setState({
-            data: data
-          })
+        // console.log(json)
+        if (json.success) {
+          const data = json.data
+          if(data.length) {
+            this.setState({
+              data: data
+            })
+          }
         }
       }).catch(err => {
         console.error('首页广告数据出错', err.message);
@@ -30,9 +34,9 @@ export default class Ad extends Component {
     return (
       <div>
         {
-          this.state.data.length
+          this.state.data.length > 0
           ? <HomeAd data={this.state.data}></HomeAd>
-          : <div>加载中</div>
+          : <Loading/>
         }
       </div>
     )

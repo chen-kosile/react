@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import {getListData} from '../../../fetch/home/home'
 import ListComponent from '../../../components/ListComponent'
+import Loading from '../../../components/Loading'
 
 import './style.css'
 import LoadMore from '../../../components/LoadMore';
@@ -44,12 +45,14 @@ export default class List extends Component {
   resultHandle = (result) => {
     result.then(res => res.json())
       .then(json => {
-        const hasMore = json.hasMore
-        const data = json.data
-        this.setState({
-          hasMore,
-          data: this.state.data.concat(data)
-        })
+        if (json.success) {
+          const hasMore = json.hasMore
+          const data = json.data
+          this.setState({
+            hasMore,
+            data: this.state.data.concat(data)
+          })
+        }
       }).catch(err => {
         console.error('首页猜你喜欢获取数据报错', err.message)
       })
@@ -59,9 +62,9 @@ export default class List extends Component {
       <div>
         <h2 className="home-list-title">猜你喜欢</h2>
         {
-          this.state.data.length
-          ? <ListComponent data={this.state.data}></ListComponent>
-          : <div>加载中</div>
+          this.state.data.length > 0
+          ? <ListComponent data={this.state.data}/>
+          : <Loading/>
         }
         {
           this.state.hasMore
