@@ -1,5 +1,5 @@
 import { IConfig } from 'umi-types';
-import routeConfig from './src/route.config.js';
+import routeConfig from './src/route.config';
 
 // ref: https://umijs.org/config/
 const config: IConfig =  {
